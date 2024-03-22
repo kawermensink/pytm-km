@@ -8,6 +8,7 @@ tm.isOrdered = True
 
 #Trust boundary
 production = Boundary("Production")
+external = Boundary("External")
 
 #Actor
 client = Actor("Client")
@@ -36,6 +37,7 @@ process_billing_service.inBoundary = production
 #External entities
 external_visa = ExternalEntity("VISA")
 external_visa.inScope = False
+external_visa.inBoundary = external
 
 #data
 update_payment = Data(
