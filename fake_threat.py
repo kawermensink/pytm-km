@@ -76,8 +76,8 @@ audit_log = Data(
 	classificaion= Classification.SENSITIVE,
 	isPII=False,
 	isStored=True,
-	isSourceEncryptedAtRest=True,
-	isDestEncryptedAtRest=True
+	isSourceEncryptedAtRest=False,
+	isDestEncryptedAtRest=False
 )
 
 #Dataflows
