@@ -1,3 +1,4 @@
 # pytm
+## Auto generated threat model 
 
-Groupe effort by foleyfoley, kawermensink, IngvarOlsen, and luka8094
+Group effort by foleyfoley, kawermensink, IngvarOlsen, and luka8094
