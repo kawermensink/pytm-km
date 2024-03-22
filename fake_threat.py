@@ -101,15 +101,15 @@ billing_service_to_logs.dstPort = 443
 billing_service_to_logs.data = audit_log
 
 ##external
-external_visa_to_billing_service = Dataflow(external_visa, process_billing_service, "auth")
+external_visa_to_billing_service = Dataflow(external_visa, process_billing_service, "authorization")
 external_visa_to_billing_service.protocol = "HTTPS"
 external_visa_to_billing_service.dstPort = 443
-external_visa_to_billing_service.data = audit_log
+external_visa_to_billing_service.data = credit_card_check
 
-billing_service_to_external_visa = Dataflow(process_billing_service, external_visa, "auth")
+billing_service_to_external_visa = Dataflow(process_billing_service, external_visa, "authentication")
 billing_service_to_external_visa.protocol = "HTTPS"
 billing_service_to_external_visa.dstPort = 443
-billing_service_to_external_visa.data = audit_log
+billing_service_to_external_visa.data = credit_card_check
 
 '''
 #Lambda
